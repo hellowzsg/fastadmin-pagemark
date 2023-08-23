@@ -1,7 +1,15 @@
 features:
+  -
+    create:
+      domain: fastadmin.shigang.eu.org
+      user: fastadmindemo
+      pass: TSpo(7muS65-8Kq3)Y
+      email: shigang.coding@outlook.com
+  - dns
   - 'php 7.4'
   - mysql
   - ssl
+  - dns
 nginx:
   root: public_html/public
   fastcgi: 'on'
