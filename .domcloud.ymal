@@ -1,0 +1,19 @@
+features:
+  - 'php 7.4'
+  - mysql
+  - ssl
+nginx:
+  root: public_html/public
+  fastcgi: 'on'
+  locations:
+    -
+      match: /
+      try_files: '$uri $uri/ /index.php?s=$uri&$args'
+commands:
+  - 'echo "1" > application/admin/command/Install/install.lock'
+  - 'cp .env.sample .env'
+  - 'sed -i "s/hostname =.*/hostname = 127.0.0.1/g" .env'
+  - 'sed -i "s/database =.*/database = ${DATABASE}/g" .env'
+  - 'sed -i "s/username =.*/username = ${USERNAME}/g" .env'
+  - 'sed -i "s/password =.*/password = ''${PASSWORD}''/g" .env'
+source: 'https://github.com/hellowzsg/fastadmin-pagemark.git'
