@@ -1,9 +1,12 @@
 features:
+  - 'php 7.4'
+  - mysql
+eatures:
   -
     create:
       domain: fastadmin.shigang.eu.org
-      user: fastadmindemo
-      pass: TSpo(7muS65-8Kq3)Y
+      user: fastadmin2
+      pass: sSp2(tmuS65-82q3)Y
       email: shigang.coding@outlook.com
   - dns
   - 'php 7.4'
@@ -25,3 +28,6 @@ commands:
   - 'sed -i "s/username =.*/username = ${USERNAME}/g" .env'
   - 'sed -i "s/password =.*/password = ''${PASSWORD}''/g" .env'
 source: 'https://github.com/hellowzsg/fastadmin-pagemark.git'
+
+
+# 注意执行 php74 think install -f
